@@ -1,2 +1,1 @@
-# Dijangi
-just started now
+# KUBERNETE LIVE PRACTICE CODE BY ALI AHMED KUMBHAR..

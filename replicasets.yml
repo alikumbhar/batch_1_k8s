@@ -1,0 +1,21 @@
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  name: nginx-replicasets
+  namespace: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx #find the label which has this app name like nginx and create replication instance this will find the pod which has name nginx and create replication instance
+  template: #in template you have to provide a name of pod 
+    metadata:
+      name: nginx-rep-pod 
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
